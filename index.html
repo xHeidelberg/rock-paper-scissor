@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
     <title>Rock, Paper, Scissor</title>
+
 </head>
+
 <body>
-    <div style="text-align: center; margin-top: 9em;">
-    <h1>Hello, World!</h1>
-    <button id="buttonHuman">Play a Game</button>
-    <h5 id="gameResult">Result</h5>
-    <script src="./index.js"></script>
+    <div style="text-align: center; margin-top: 2em;">
+        <h1 id="headerRPS"> THE <br> ROCK PAPER SCISSOR</h1>
+    <!--
+        <button id="buttonHuman" style="margin-bottom: 5rem;">Play a Game</button> <br>
+        <h5 id="gameResult">Result</h5>
+    -->
+        <div id="scoreBoard">
+            <h1 id="playerScore">123</h1>
+            <h1>👈 SCORE 👉</h1>
+            <h1 id="computerScore">123</h1>
+        </div>
+        <div id="baseGame">
+            
+            <div class="pickBase" id="baseDiv"><strong>YOU</strong></div>
+            <h1>VS</h1>
+            <div class="pickBaseComputer" id="baseDiv"><strong>COMPUTER</strong></div>
+        </div>
     </div>
+    <!-- Result -->
+    <div id="selectedPick" style="text-align: center;">
+        <button id="rock" style="background-image: url(./images/rock.png);"></button>
+        <button id="paper" style="background-image: url(./images/paper.png);"></button>
+        <button id="scissor" style="background-image: url(./images/scissor.png);"></button>
+    </div>
+    <div id="resultHere" style="text-align: center;">
+        <p>Result:
+            <!-- Result Here-->
+        </p>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
