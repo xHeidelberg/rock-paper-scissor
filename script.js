@@ -1,8 +1,12 @@
-const validChoice = ["rock", "paper", "scissors"];
 let resultIn = document.getElementById("gameResult");
 let clickAction = document.querySelector("#buttonHuman");
 
-// Select TODO
+let playerScore = 0;
+let computerScore = 0;
+let drawScore = 0;
+let maxRound = 5;// Pwedeng input
+
+
 let pickingResult = document.querySelectorAll('#selectedPick');
 pickingResult.forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -23,13 +27,9 @@ pickingResult.forEach((button) => {
                 baseHuman.style.backgroundImage = 'url(./images/scissor.png)';
                 break;
         }
-
     });
 }
 );
-
-// not moving if hindi gumaganaaa!!
-
 
 function whatSelected(id) {
     let para = document.querySelector('#resultHere p')
@@ -51,37 +51,37 @@ function whatSelected(id) {
 
 //clickAction.addEventListener('click', playGame);
 function playGame() {
-    // let humanScore = 0;
-    let computerScore = 0;
-    let drawScore = 0;
-
     const human = getHumanChoice;
     const computer = getComputerChoice;
 
     function getComputerChoice() {
+        const validChoice = ["rock", "paper", "scissors"];
         let randoming = Math.floor(Math.random() * validChoice.length) + 1;
 
         if (randoming === 1)
+            //background = rock
             return "rock";
         else if (randoming === 2)
+            //background = paper
             return "paper";
         else
-            return "scissors";
+            //background = scissors
+            return "scissor";
     }
-/*
-    function getHumanChoice() {
-        const pick = prompt("Pick (Rock, Paper or Scissors): ");
-        try {
-            if (validChoice.includes(pick.toLowerCase())) {
-                return pick.toLowerCase();
-            }
-        }
-        catch (error) {
-            return;
-        }
-
-    }
-*/
+    /*
+       function getHumanChoice() {
+           const pick = prompt("Pick (Rock, Paper or Scissors): ");
+           try {
+               if (validChoice.includes(pick.toLowerCase())) {
+                   return pick.toLowerCase();
+               }
+           }
+           catch (error) {
+               return;
+           }
+   
+       }
+    */
     function playGround(human, computer) {
         if (human == "rock") {
             if (computer === "paper") {
