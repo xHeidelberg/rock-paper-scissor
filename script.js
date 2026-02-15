@@ -65,43 +65,34 @@ function getComputerChoice() {
 function playGround(human, computer) {
     if (human == "rock") {
         if (computer === "paper") {
-            console.log("Computer Wins!");
             computerScore++;
         }
         else if (computer === "scissors") {
-            console.log("Player Wins!");
             playerScore++;
         }
         else if (computer === "rock") {
-            console.log("Draw!");
             drawScore++;
         }
     }
     else if (human === "paper") {
         if (computer === "rock") {
-            console.log("Player Wins!");
             playerScore++;
         }
         else if (computer === "scissors") {
-            console.log("Computer Wins!");
             computerScore++;
         }
         else {
-            console.log("Draw!");
             drawScore++
         }
     }
     else {
         if (computer === "rock") {
-            console.log("Computer Wins!");
             computerScore++;
         }
         else if (computer === "paper") {
-            console.log("Player Wins!");
             playerScore++;
         }
         else {
-            console.log("Draw!");
             drawScore++;
         }
     }
